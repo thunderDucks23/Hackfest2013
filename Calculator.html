@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Decathlon Points Calculator</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<script type="text/javascript" src="DecCalc.js"></script>
+<style type="text/css">
+  .tables{text-align:center;}
+	
+	.tableLeft{margin: 0px 25px 0px 75px;
+	float:left;
+	background-color:#E2E2E2;
+	text-align:left;}
+	
+	.tableRight{margin: 0px 75px 0px 25px;
+	float:right;
+	background-color:#E2E2E2;
+	text-align:left;}
+	
+	
+}
+</style>
+</head>
+
+<body>
+
+	<div id="content">
+	
+<h1>Scoring Calculators</h1>
+		<p>The decathlon in comprised of ten individual events. Its goal is to 
+		measure overall athleticism of an athlete. Running, throwing, and 
+		jumping events are all included in the decathlon. To compare events 
+		across different skills, a scoring system was developed. Below are the 
+		calculators to convert your performance into the amount of points earned 
+		in the men's outdoor decathlon and indoor heptathlon.</p>
+<h3>How to Use</h3>
+		<ul>
+			<li>Field event marks should be entered as metric marks only using the format 0.00 
+(in meters)</li>
+			<li>Times should be entered using the format 0:00.00 (m:ss.dd)</li>
+			<li>All times should be entered as automatic timed.<ul>
+				<li>If the event was hand-timed, add 0.14 seconds for 400m or 0.24 
+				seconds for events shorter than 400m.</li>
+			</ul>
+			</li>
+		</ul><p> &nbsp;</p>
+<div class="tables">
+<table border="1" cellpadding="2" cellspacing="1" class="tableLeft">
+	<tr><th colspan ="3" align="center"><b>Outdoor Decathlon</b></th></tr>
+	<tr>
+		<th class ="calcHeader">Event</th>
+		<th class ="calcHeader">Mark</th>
+		<th class ="calcHeader">Score</th>
+	</tr>
+	<tr>
+		<td>100m</td>
+		<td><input type="text" placeholder="ss.ss" name="mark_modec_100" autocomplete="off" size="6" maxlength="5" onchange="calculateScoring('modec', '100', this.value)" /></td>
+		<td align="right"><div id="modec_100"></div></td>
+	</tr>
+	<tr>
+		<td>Long Jump</td>
+		<td><input type="text" placeholder="m.mm" name="mark_modec_LJ" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('modec', 'LJ', this.value)" /></td>
+		<td align="right"><div id="modec_LJ"></div></td>
+	</tr>
+	<tr>
+		<td>Shot Put</td>
+		<td><input type="text" placeholder="mm.mm" name="mark_modec_SP" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('modec', 'SP', this.value)" /></td>
+		<td align="right"><div id="modec_SP"></div></td>
+	</tr>
+	<tr>
+		<td>High Jump</td>
+		<td><input type="text" placeholder="m.mm" name="mark_modec_HJ" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('modec', 'HJ', this.value)" /></td>
+		<td align="right"><div id="modec_HJ"></div></td>
+	</tr>
+	<tr>
+		<td>400m</td>
+		<td><input type="text" placeholder="m:ss.ss" name="mark_modec_400" autocomplete = "off" size="6" maxlength="7" onchange="calculateScoring('modec', '400', this.value)" /></td>
+		<td align="right"><div id="modec_400"></div></td>
+	</tr>
+	<tr>
+		<td>110m Hurdles</td>
+		<td><input type="text" placeholder="ss.ss" name="mark_modec_110H" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('modec', '110H', this.value)" /></td>
+		<td align="right"><div id="modec_110H"></div></td>
+	</tr>
+	<tr>
+		<td>Discus Throw</td>
+		<td><input type="text" placeholder="mm.mm" name="mark_modec_DT" autocomplete = "off" size="6" maxlength="6" onchange="calculateScoring('modec', 'DT', this.value)" /></td>
+		<td align="right"><div id="modec_DT"></div></td>
+	</tr>
+	<tr>
+		<td>Pole Vault</td>
+		<td><input type="text" placeholder="m.mm" name="mark_modec_PV" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('modec', 'PV', this.value)" /></td>
+		<td align="right"><div id="modec_PV"></div></td>
+	</tr>
+	<tr>
+		<td>Javelin Throw</td>
+		<td><input type="text" placeholder="mm.mm" name="mark_modec_JT" autocomplete = "off" size="6" maxlength="6" onchange="calculateScoring('modec', 'JT', this.value)" /></td>
+		<td align="right"><div id="modec_JT"></div></td>
+	</tr>
+	<tr>
+		<td>1500m</td>
+		<td><input type="text" placeholder="mm:ss.ss"name="mark_modec_1500" autocomplete = "off" size="6" maxlength="8" onchange="calculateScoring('modec', '1500', this.value)" /></td>
+		<td align="right"><div id="modec_1500"></div></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right">Total Score: </td>
+		<td align="right"><div id="modec_total"></div></td>
+	</tr>
+</table>
+
+<table border="1" cellpadding="2" cellspacing="1" class="tableRight">
+	<tr><th colspan ="3" align="center"><b>Indoor Heptathlon</b></th></tr>
+	<tr>
+		<th class ="calcHeader">Event</th>
+		<th class ="calcHeader">Mark</th>
+		<th class ="calcHeader">Score</th>
+	</tr>
+	<tr>
+		<td>60m</td>
+		<td><input type="text" placeholder="s.ss" name="mark_mihept_60" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('mihept', '60', this.value)" /></td>
+		<td align="right"><div id="mihept_60"></div></td>
+	</tr>
+	<tr>
+		<td>Long Jump</td>
+		<td><input type="text" placeholder="m.mm" name="mark_mihept_LJ" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('mihept', 'LJ', this.value)" /></td>
+		<td align="right"><div id="mihept_LJ"></div></td>
+	</tr>
+	<tr>
+		<td>Shot Put</td>
+		<td><input type="text" placeholder="mm.mm" name="mark_mihept_SP" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('mihept', 'SP', this.value)" /></td>
+		<td align="right"><div id="mihept_SP"></div></td>
+	</tr>
+	<tr>
+		<td>High Jump</td>
+		<td><input type="text" placeholder="m.mm" name="mark_mihept_HJ" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('mihept', 'HJ', this.value)" /></td>
+		<td align="right"><div id="mihept_HJ"></div></td>
+	</tr>
+	<tr>
+		<td>60m Hurdles</td>
+		<td><input type="text" placeholder="s.ss" name="mark_mihept_60H" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('mihept', '60H', this.value)" /></td>
+		<td align="right"><div id="mihept_60H"></div></td>
+	</tr>
+	<tr>
+		<td>Pole Vault</td>
+		<td><input type="text" placeholder="m.mm" name="mark_mihept_PV" autocomplete = "off" size="6" maxlength="5" onchange="calculateScoring('mihept', 'PV', this.value)" /></td>
+		<td align="right"><div id="mihept_PV"></div></td>
+	</tr>
+	<tr>
+		<td>1000m</td>
+		<td><input type="text" placeholder="m:ss.ss"name="mark_mihept_1000" autocomplete = "off" size="6" maxlength="8" onchange="calculateScoring('mihept', '1000', this.value)" /></td>
+		<td align="right"><div id="mihept_1000"></div></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right">Total Score: </td>
+		<td align="right"><div id="mihept_total"></div></td>
+	</tr>
+</table>
+</div>
+<p class="clear">&nbsp;</p>
+	</div>
+</div>
+
+</body>
+
+</html>
